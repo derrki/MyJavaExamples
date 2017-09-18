@@ -19,9 +19,9 @@ public class BooleanTyp {
 
 
 
-    boolean b1 = true;
-    boolean b2 = false;
-    boolean b3 = 2 > 3;
+//    boolean b1 = true;
+//    boolean b2 = false;
+//    boolean b3 = 2 > 3;
 
     static void testSyntax (int a, int b){
         //можна написати ((a<10) && (b > 10)), але логічні оператори мають
@@ -41,6 +41,27 @@ public class BooleanTyp {
         } else {
             System.out.println("false");
         }
+    }
+
+    static void logicsOperation (boolean a, boolean b){
+
+        System.out.println("a = "+a+"   b = "+b);
+        System.out.println("a && b = " + (a&&b));
+        System.out.println("!a && b = " + (!a&&b));
+        System.out.println("a && !b = " + (a&&!b));
+        System.out.println("!a && !b = " + (!a&&!b));
+
+        System.out.println("a || b = " + (a||b));
+        System.out.println("!a || b = " + (!a||b));
+        System.out.println("a || !b = " + (a||!b));
+        System.out.println("!a || !b = " + (!a||!b));
+
+        System.out.println("a & b = " + (a&b));
+        System.out.println("!a & b = " + (!a&b));
+        System.out.println("a & !b = " + (a&b));
+        System.out.println("!a & !b = " + (a&b));
+
+
     }
 
 }

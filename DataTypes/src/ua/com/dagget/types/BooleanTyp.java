@@ -58,10 +58,31 @@ public class BooleanTyp {
 
         System.out.println("a & b = " + (a&b));
         System.out.println("!a & b = " + (!a&b));
-        System.out.println("a & !b = " + (a&b));
-        System.out.println("!a & !b = " + (a&b));
+        System.out.println("a & !b = " + (a&!b));
+        System.out.println("!a & !b = " + (!a&!b));
 
+        System.out.println("a | b = " + (a|b));
+        System.out.println("!a | b = " + (!a|b));
+        System.out.println("a | !b = " + (a|!b));
+        System.out.println("!a | !b = " + (!a|!b));
 
     }
 
+    static boolean compare1(int value){
+
+        System.out.print("Compare ("+ value + ")");
+        System.out.println("Результат = " + (value < 7) + " тому що " + value + " < 7 це "+(value < 7));
+       return value < 7;
+    }
+
+    static boolean compare2(int value){
+
+        System.out.print("Compare ("+ value + ")");
+        System.out.println("Результат = " + (value > 7) + " тому що " + value + " > 7 це "+(value > 7));
+        return value < 7;
+    }
+
+    static void testCompare(){
+        //TODO
+    }
 }

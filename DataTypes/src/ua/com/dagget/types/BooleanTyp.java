@@ -1,5 +1,7 @@
 package ua.com.dagget.types;
 
+import ua.com.dagget.helpClasses.PrintMetod;
+
 /*
   Java boolean Example
   This Java Example shows how to declare and use Java primitive boolean variable
@@ -18,68 +20,69 @@ public class BooleanTyp {
      */
 
 
+    PrintMetod printMetod = new PrintMetod();
 
 //    boolean b1 = true;
 //    boolean b2 = false;
 //    boolean b3 = 2 > 3;
 
-    static void testSyntax (int a, int b){
+    void testSyntax (int a, int b){
         //можна написати ((a<10) && (b > 10)), але логічні оператори мають
         //менший пріоритет порівняно з операторами порівняння. Крім унарного !
         //все залежить від зручності читання
         if (a < 10 && b > 10){
-            System.out.println("true");
+            printMetod.println("true");
         }
         else {
-            System.out.println("false");
+            printMetod.println("false");
         }
     }
 
-    static void testOr(int a, int b){
+    void testOr(int a, int b){
         if (a < 5 || b > 5){
-            System.out.println("true");
+            printMetod.println("true");
         } else {
-            System.out.println("false");
+            printMetod.println("false");
         }
     }
 
-    static void logicsOperation (boolean a, boolean b){
+    void logicsOperation (boolean a, boolean b){
 
-        System.out.println("a = "+a+"   b = "+b);
-        System.out.println("a && b = " + (a&&b));
-        System.out.println("!a && b = " + (!a&&b));
-        System.out.println("a && !b = " + (a&&!b));
-        System.out.println("!a && !b = " + (!a&&!b));
+        printMetod.println("a = "+a+"   b = "+b);
+        printMetod.println("a && b = " + (a&&b));
+        printMetod.println("!a && b = " + (!a&&b));
+        printMetod.println("a && !b = " + (a&&!b));
+        printMetod.println("!a && !b = " + (!a&&!b));
 
-        System.out.println("a || b = " + (a||b));
-        System.out.println("!a || b = " + (!a||b));
-        System.out.println("a || !b = " + (a||!b));
-        System.out.println("!a || !b = " + (!a||!b));
+        printMetod.println("a || b = " + (a||b));
+        printMetod.println("!a || b = " + (!a||b));
+        printMetod.println("a || !b = " + (a||!b));
+        printMetod.println("!a || !b = " + (!a||!b));
 
-        System.out.println("a & b = " + (a&b));
-        System.out.println("!a & b = " + (!a&b));
-        System.out.println("a & !b = " + (a&!b));
-        System.out.println("!a & !b = " + (!a&!b));
+        printMetod.println("a & b = " + (a&b));
+        printMetod.println("!a & b = " + (!a&b));
+        printMetod.println("a & !b = " + (a&!b));
+        printMetod.println("!a & !b = " + (!a&!b));
 
-        System.out.println("a | b = " + (a|b));
-        System.out.println("!a | b = " + (!a|b));
-        System.out.println("a | !b = " + (a|!b));
-        System.out.println("!a | !b = " + (!a|!b));
+        printMetod.println("a | b = " + (a|b));
+        printMetod.println("!a | b = " + (!a|b));
+        printMetod.println("a | !b = " + (a|!b));
+        printMetod.println("!a | !b = " + (!a|!b));
 
     }
 
-    static boolean compare1(int value){
+    boolean compare1(int value){
 
-        System.out.print("Compare ("+ value + ")");
-        System.out.println("Результат = " + (value < 7) + " тому що " + value + " < 7 це "+(value < 7));
+        printMetod.print("Compare ("+ value + ")");
+        printMetod.println("Результат = " + (value < 7) + " тому що " + value + " < 7 це "+(value < 7));
        return value < 7;
     }
 
-    static boolean compare2(int value){
+    boolean compare2(int value){
 
-        System.out.print("Compare ("+ value + ")");
-        System.out.println("Результат = " + (value > 7) + " тому що " + value + " > 7 це "+(value > 7));
-        return value < 7;
+        printMetod.print("Compare ("+ value + ")");
+        printMetod.println("Результат = " + (value > 7) + " тому що " + value + " > 7 це "+(value > 7));
+        return value > 7;
     }
 
     static void testCompare(){

@@ -1,32 +1,36 @@
 package ua.com.dagget.types;
 
+import ua.com.dagget.helpClasses.PrintMetod;
+
 public class MainTypes {
     public static void main(String[] args) {
 
-
         int a = 2, b = 8;
 
-        BooleanTyp.testSyntax(a, b);
-        BooleanTyp.testOr(a, b);
+        PrintMetod printMetod = new PrintMetod();
+        BooleanTyp booleanTyp = new BooleanTyp();
 
-        BooleanTyp.logicsOperation(true, false);
+        booleanTyp.testSyntax(a, b);
+        booleanTyp.testOr(a, b);
 
-        System.out.println("\nУмовне І &&");
+        booleanTyp.logicsOperation(true, false);
+
+        printMetod.println("\nУмовне І &&");
         //метод compare2 виконається
-        boolean bool = BooleanTyp.compare1(5) && BooleanTyp.compare2(3);
-        System.out.println("bool=" + bool);
-        System.out.println("----------------------");
+        boolean bool = booleanTyp.compare1(5) && booleanTyp.compare2(3);
+        printMetod.println("bool=" + bool);
+        printMetod.println("----------------------");
         //метод compare2 не виконається
-        bool = BooleanTyp.compare1(9) && BooleanTyp.compare2(9);
-        System.out.println("bool=" + bool);
-        System.out.println("----------------------");
+        bool = booleanTyp.compare1(9) && booleanTyp.compare2(9);
+        printMetod.println("bool=" + bool);
+        printMetod.println("----------------------");
 
-        System.out.println("\nУмовне або ||");
-        bool = BooleanTyp.compare1(9) || BooleanTyp.compare2(3);
-        System.out.println("bool=" + bool);
-        System.out.println("----------------------");
-        bool = BooleanTyp.compare1(9) || BooleanTyp.compare2(3);
-        System.out.println("bool=" + bool);
+        printMetod.println("\nУмовне або ||");
+        bool = booleanTyp.compare1(9) || booleanTyp.compare2(3);
+        printMetod.println("bool=" + bool);
+        printMetod.println("----------------------");
+        bool = booleanTyp.compare1(9) || booleanTyp.compare2(3);
+        printMetod.println("bool=" + bool);
 
     }
 }

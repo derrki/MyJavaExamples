@@ -9,6 +9,7 @@ public class MainArray {
 
         //arrayTestMethod.addDataArray(10);
 
-        arrayTestMethod.invertArray( arrayTestMethod.addDataArray(25));
+       // arrayTestMethod.invertArray( arrayTestMethod.addDataArray(25));
+        arrayTestMethod.invertArray2( arrayTestMethod.addDataArray(5));
     }
 }

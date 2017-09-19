@@ -26,6 +26,19 @@ public class ArrayTestMethod {
             System.out.print(arr[i]);
         }
     }
+     //1234567
+    //123456
+    //
+    void invertArray2 (int[] arr){
+        for (int k =arr.length/2; k>0; k--){
+            int tmp = arr[k-1];
+            arr[k-1] = arr[arr.length - k];
+            arr[arr.length-k] = tmp;
 
+        }
+        for (int i = 0; i< arr.length; i++ ) {
+            System.out.print(arr[i]);
+        }
+    }
 
 }

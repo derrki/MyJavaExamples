@@ -20,7 +20,7 @@ public class BooleanTyp {
      */
 
 
-    PrintMetod printMetod = new PrintMetod();
+    PrintMetod printMethod = new PrintMetod();
 
 //    boolean b1 = true;
 //    boolean b2 = false;
@@ -31,57 +31,57 @@ public class BooleanTyp {
         //менший пріоритет порівняно з операторами порівняння. Крім унарного !
         //все залежить від зручності читання
         if (a < 10 && b > 10){
-            printMetod.println("true");
+            printMethod.println("true");
         }
         else {
-            printMetod.println("false");
+            printMethod.println("false");
         }
     }
 
     void testOr(int a, int b){
         if (a < 5 || b > 5){
-            printMetod.println("true");
+            printMethod.println("true");
         } else {
-            printMetod.println("false");
+            printMethod.println("false");
         }
     }
 
     void logicsOperation (boolean a, boolean b){
 
-        printMetod.println("a = "+a+"   b = "+b);
-        printMetod.println("a && b = " + (a&&b));
-        printMetod.println("!a && b = " + (!a&&b));
-        printMetod.println("a && !b = " + (a&&!b));
-        printMetod.println("!a && !b = " + (!a&&!b));
+        printMethod.println("a = "+a+"   b = "+b);
+        printMethod.println("a && b = " + (a&&b));
+        printMethod.println("!a && b = " + (!a&&b));
+        printMethod.println("a && !b = " + (a&&!b));
+        printMethod.println("!a && !b = " + (!a&&!b));
 
-        printMetod.println("a || b = " + (a||b));
-        printMetod.println("!a || b = " + (!a||b));
-        printMetod.println("a || !b = " + (a||!b));
-        printMetod.println("!a || !b = " + (!a||!b));
+        printMethod.println("a || b = " + (a||b));
+        printMethod.println("!a || b = " + (!a||b));
+        printMethod.println("a || !b = " + (a||!b));
+        printMethod.println("!a || !b = " + (!a||!b));
 
-        printMetod.println("a & b = " + (a&b));
-        printMetod.println("!a & b = " + (!a&b));
-        printMetod.println("a & !b = " + (a&!b));
-        printMetod.println("!a & !b = " + (!a&!b));
+        printMethod.println("a & b = " + (a&b));
+        printMethod.println("!a & b = " + (!a&b));
+        printMethod.println("a & !b = " + (a&!b));
+        printMethod.println("!a & !b = " + (!a&!b));
 
-        printMetod.println("a | b = " + (a|b));
-        printMetod.println("!a | b = " + (!a|b));
-        printMetod.println("a | !b = " + (a|!b));
-        printMetod.println("!a | !b = " + (!a|!b));
+        printMethod.println("a | b = " + (a|b));
+        printMethod.println("!a | b = " + (!a|b));
+        printMethod.println("a | !b = " + (a|!b));
+        printMethod.println("!a | !b = " + (!a|!b));
 
     }
 
     boolean compare1(int value){
 
-        printMetod.print("Compare ("+ value + ")");
-        printMetod.println("Результат = " + (value < 7) + " тому що " + value + " < 7 це "+(value < 7));
+        printMethod.print("Compare ("+ value + ")");
+        printMethod.println("Результат = " + (value < 7) + " тому що " + value + " < 7 це "+(value < 7));
        return value < 7;
     }
 
     boolean compare2(int value){
 
-        printMetod.print("Compare ("+ value + ")");
-        printMetod.println("Результат = " + (value > 7) + " тому що " + value + " > 7 це "+(value > 7));
+        printMethod.print("Compare ("+ value + ")");
+        printMethod.println("Результат = " + (value > 7) + " тому що " + value + " > 7 це "+(value > 7));
         return value > 7;
     }
 

@@ -3,7 +3,7 @@ package ua.com.dagget.array;
 /**
  * Created by press on 21.09.2017.
  */
-public class AddArrayData {
+class AddArrayData {
 
   static int[]  addIntData(){
 

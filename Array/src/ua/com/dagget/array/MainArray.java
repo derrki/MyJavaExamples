@@ -1,6 +1,6 @@
 package ua.com.dagget.array;
 
-import ua.com.juja.core.Lab11;
+import ua.com.juja.week1.Lab11;
 
 import java.io.IOException;
 

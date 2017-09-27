@@ -1,4 +1,4 @@
-package ua.com.juja.core;
+package ua.com.juja.week1.lab11;
 
 public class Lab11 {
     public int lookFor(int max) {

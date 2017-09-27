@@ -1,4 +1,6 @@
-package ua.com.juja.core;
+package ua.com.juja.week1.lab11;
+
+import ua.com.juja.week1.lab11.Lab11;
 
 /**
  * Created by press on 21.09.2017.

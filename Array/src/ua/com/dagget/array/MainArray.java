@@ -1,7 +1,5 @@
 package ua.com.dagget.array;
 
-import ua.com.juja.week1.Lab11;
-
 import java.io.IOException;
 
 /**
@@ -11,8 +9,8 @@ public class MainArray {
     public static void main(String[] args) throws IOException {
         ArrayTestMethod arrayTestMethod = new ArrayTestMethod();
 
-        Lab11 lab11 = new Lab11();
-        lab11.lookFor(14);
+       // Lab11 lab11 = new Lab11();
+        //lab11.lookFor(14);
 
         //AddArrayData.addIntData();
 

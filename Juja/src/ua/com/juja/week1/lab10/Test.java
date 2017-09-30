@@ -1,4 +1,4 @@
-package ua.com.dagget.lab10;
+package ua.com.juja.week1.lab10;
 
 import java.util.Arrays;
 

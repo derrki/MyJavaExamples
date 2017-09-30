@@ -1,7 +1,7 @@
-package ua.com.dagget.lab10;
+package ua.com.juja.week1.lab10;
 
 /**
- * Created by derrki on 11:16.
+ * 1. Make it work. 2. Make it right. 3. Make it fast
  */
 public class Merger {
     public static int[] merge(int[] fst, int[] snd) {

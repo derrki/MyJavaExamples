@@ -18,14 +18,13 @@ public class WhiteCrow {
     }
 
     private static boolean found(int[] array, int givenNumbPosition) {
-        int foundNumber = array[givenNumbPosition];
 
         for (int index = 0; index < array.length; index++) {
 
             if (givenNumbPosition == index){
                 continue;
             }
-            if (array[index] == foundNumber) {
+            if (array[index] == array[givenNumbPosition]) {
                 return true;
             }
         }

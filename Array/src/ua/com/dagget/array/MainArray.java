@@ -1,35 +1,21 @@
 package ua.com.dagget.array;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * Created by press on 19.09.2017.
  */
 public class MainArray {
     public static void main(String[] args) throws IOException {
-        ArrayTestMethod arrayTestMethod = new ArrayTestMethod();
 
-       // Lab11 lab11 = new Lab11();
-        //lab11.lookFor(14);
+        int [] arr = {1,2,3,4,5};
 
-        //AddArrayData.addIntData();
+        for (int i = 0; i < arr.length; i++) {
+            arr = SwapArray.swap(arr, i, i+1);
+            System.out.println(Arrays.toString(arr));
+        }
 
-         // for (int i = 0; i < 10; i++){
-         //   System.out.println(AddArrayData.addStringData());
-        //}
-
-
-        // ArrayMaxMin arrayMaxMin = new ArrayMaxMin();
-        //arrayMaxMin.maxMin(AddArrayData.addIntData());
-
-        //arrayTestMethod.addDataArray(10);
-
-        // arrayTestMethod.invertArray( arrayTestMethod.addDataArray(25));
-        //arrayTestMethod.invertArray2( arrayTestMethod.addDataArray(8));
-
-
-       // arrayTestMethod.evenNumbers( arrayTestMethod.addDataArray(10));
-        //arrayTestMethod.invertArray3( arrayTestMethod.addDataArray(8));
-        //arrayTestMethod.nullValue();
     }
 }

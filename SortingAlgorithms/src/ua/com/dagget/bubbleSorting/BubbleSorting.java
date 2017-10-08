@@ -15,10 +15,10 @@ public class BubbleSorting {
 
         int[] resMaas = mas;
 
-        for (int i = 0; i < resMaas.length; i++) {
-            for (int j = 1; j < resMaas.length ; j++) {
-                if(resMaas[i]> resMaas[j]){
-                    swap(resMaas, i);
+        for (int i = resMaas.length-1; i >= 0 ; i--) {
+            for (int j = 0; j < i ; j++) {
+                if(resMaas[j] > resMaas[j+1]){
+                    swap(resMaas, j);
                 }
             }
 
@@ -30,6 +30,6 @@ public class BubbleSorting {
     private void swap(int[] mas, int index) {
         int temp = mas[index];
         mas[index] = mas[index+1];
-        mas[index] = temp;
+        mas[index+1] = temp;
     }
 }

@@ -1,8 +1,7 @@
 package ua.com.dagget.array;
-
 /**
- * Created by press on 21.09.2017.
- */
+*1.Make it work. 2.Make it right. 3.Make it fast
+*/
 class AddArrayData {
 
   static int[]  addIntData(){

@@ -1,4 +1,4 @@
-package ua.com.juja.week3.quiz12;
+package ua.com.juja.week4.quiz12;
 
 public class Child extends Parent {
 }

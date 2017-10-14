@@ -1,4 +1,4 @@
-package ua.com.juja.week3.quiz13;
+package ua.com.juja.week4.quiz13;
 
 public class Test {
     public static void main(String[] args) {

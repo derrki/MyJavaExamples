@@ -6,7 +6,6 @@ package ua.com.juja.week3.changeXY;
 public class Main {
     public static void main(String[] args) {
 
-        assertMethod("codex", "codey");
     }
 
     private static void assertMethod(String input, String expected) {
@@ -20,6 +19,18 @@ public class Main {
     }
 
     public static String changeXY(String input) {
-        return "codey";
+
+        char[] chars = input.toCharArray();
+        char[] result = new char[input.length()];
+
+        for (int index = 0; index < chars.length; index++) {
+            if (chars[index] == 'x') {
+                result[index] = 'y';
+            } else {
+                result[index]= chars[index];
+            }
+
+        }
+        return new String(result);
     }
 }

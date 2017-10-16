@@ -5,9 +5,15 @@ package ua.com.juja.week4.OOPWebinar;
  */
 public class Floor {
     private int number;
+    private Apartment [] apartments;
 
-    public Floor(int number) {
+    public Floor(int number, int floorsCount) {
         this.number = number;
+        this.apartments = new Apartment[floorsCount];
+        for (int index = 0; index < floorsCount ; index++) {
+            apartments[index] = new Apartment();
+
+        }
     }
 
     public Apartment getFreeApartment() {
@@ -16,7 +22,13 @@ public class Floor {
 
     @Override
     public String toString() {
-
-        return "Floor number " + number;
+       String result = "=============================\n";
+        result += "Floor number " + number + "\n";
+        result += "-----------------------------\n";
+        for (Apartment apartment : apartments){
+            result += apartment.toString() + "\n";
+        }
+        result += "=============================\n";
+        return result;
     }
 }

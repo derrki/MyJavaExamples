@@ -3,13 +3,14 @@ package ua.com.juja.week4.OOPWebinar;
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
  */
+
 public class House {
     private Floor[] floors;
 
-    public House(int count) {
-        floors = new Floor[count];
-        for (int index = 0; index < count; index++) {
-            floors[index] = new Floor(index + 1);
+    public House(int floorsCount, int apartmensOnFloor) {
+        floors = new Floor[floorsCount];
+        for (int index = 0; index < floorsCount; index++) {
+            floors[index] = new Floor(index + 1, apartmensOnFloor);
         }
     }
 
@@ -20,7 +21,6 @@ public class House {
                 apartment.addOwner(owner);
                 break;
             }
-
         }
     }
 

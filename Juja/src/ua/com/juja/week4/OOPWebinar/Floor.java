@@ -7,11 +7,11 @@ public class Floor {
     private int number;
     private Apartment [] apartments;
 
-    public Floor(int number, int floorsCount) {
+    public Floor(int number, int floorsCount, NumberGenerator numbers) {
         this.number = number;
         this.apartments = new Apartment[floorsCount];
         for (int index = 0; index < floorsCount ; index++) {
-            apartments[index] = new Apartment();
+            apartments[index] = new Apartment(numbers.getNumber());
 
         }
     }

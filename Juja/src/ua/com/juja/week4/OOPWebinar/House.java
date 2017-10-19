@@ -6,11 +6,13 @@ package ua.com.juja.week4.OOPWebinar;
 
 public class House {
     private Floor[] floors;
+    private NumberGenerator numbers;
 
     public House(int floorsCount, int apartmensOnFloor) {
+        numbers = new NumberGenerator();
         floors = new Floor[floorsCount];
         for (int index = 0; index < floorsCount; index++) {
-            floors[index] = new Floor(index + 1, apartmensOnFloor);
+            floors[index] = new Floor(index + 1, apartmensOnFloor, numbers);
         }
     }
 

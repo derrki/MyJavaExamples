@@ -1,5 +1,7 @@
 package ua.com.juja.week4.OOPWebinar;
 
+import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
+
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
  */
@@ -17,7 +19,7 @@ public class House {
 
     public void settle(Owner owner){
         for (Floor floor : floors){
-           Apartment apartment = floor.getFreeApartment();
+           LivingApartment apartment = (LivingApartment) floor.getFreeApartment();
             if (apartment != null){
                 apartment.addOwner(owner);
                 break;

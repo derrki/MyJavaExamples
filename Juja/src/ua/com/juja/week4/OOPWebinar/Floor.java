@@ -1,26 +1,31 @@
 package ua.com.juja.week4.OOPWebinar;
 
+import ua.com.juja.week4.OOPWebinar.apartment.Apartment;
+import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
+import ua.com.juja.week4.OOPWebinar.apartment.TechnicalApartment;
+
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
  */
 public class Floor {
     private static final int DEFAULT_APARTMENT_KAPASITY = 4;
     private int number;
-    private Apartment [] apartments;
+    private Apartment[] apartments;
 
     public Floor(int number, int floorsCount, NumberGenerator numbers) {
         this.number = number;
         this.apartments = new Apartment[floorsCount];
-        for (int index = 0; index < floorsCount ; index++) {
-            apartments[index] = new Apartment(numbers.getNumber(), DEFAULT_APARTMENT_KAPASITY);
+        this.apartments[0] = new TechnicalApartment(numbers.getNumber());
+        for (int index = 1; index < floorsCount ; index++) {
+            apartments[index] = new LivingApartment(numbers.getNumber(), DEFAULT_APARTMENT_KAPASITY);
 
         }
     }
 
     public Apartment getFreeApartment() {
         for (Apartment apartment: apartments) {
-            if (apartment.isFree()){
-                return apartment;
+            if (apartment instanceof LivingApartment && apartment.isFree()){
+                return (LivingApartment)apartment;
             }
         }
         return null;

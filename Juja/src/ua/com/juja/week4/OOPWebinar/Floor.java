@@ -4,6 +4,7 @@ package ua.com.juja.week4.OOPWebinar;
  * 1. Make it work. 2. Make it right. 3. Make it fast
  */
 public class Floor {
+    private static final int DEFAULT_APARTMENT_KAPASITY = 4;
     private int number;
     private Apartment [] apartments;
 
@@ -11,13 +12,18 @@ public class Floor {
         this.number = number;
         this.apartments = new Apartment[floorsCount];
         for (int index = 0; index < floorsCount ; index++) {
-            apartments[index] = new Apartment(numbers.getNumber());
+            apartments[index] = new Apartment(numbers.getNumber(), DEFAULT_APARTMENT_KAPASITY);
 
         }
     }
 
     public Apartment getFreeApartment() {
-        return null;// TODO implement me
+        for (Apartment apartment: apartments) {
+            if (apartment.isFree()){
+                return apartment;
+            }
+        }
+        return null;
     }
 
     @Override

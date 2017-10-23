@@ -1,6 +1,8 @@
 package ua.com.juja.week4.OOPWebinar;
 
 import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
+import ua.com.juja.week4.OOPWebinar.staff.Cleaner;
+import ua.com.juja.week4.OOPWebinar.staff.Housemaid;
 
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
@@ -8,9 +10,12 @@ import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
 
 public class House {
     private Floor[] floors;
+    private Cleaner[] cleaners;
 
     public House(int floorsCount, int apartmensOnFloor) {
         NumberGenerator numbers = new NumberGenerator();
+        cleaners = new Cleaner[floorsCount];
+
         floors = new Floor[floorsCount];
         for (int index = 0; index < floorsCount; index++) {
             floors[index] = new Floor(index + 1, apartmensOnFloor, numbers);
@@ -34,5 +39,19 @@ public class House {
             result += floor.toString() + "\n";
         }
         return result;
+    }
+
+    public void addCleaner(Cleaner cleaner) {
+        this.cleaners[nextCleanerPlace()] = cleaner;
+    }
+
+    private int nextCleanerPlace() {
+        for (int index = 0; index < cleaners.length ; index++) {
+            if (cleaners[index] == null) {
+                return index;
+            }
+
+        }
+        throw  new RuntimeException("No place for new cleaner");
     }
 }

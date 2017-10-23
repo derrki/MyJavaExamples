@@ -23,4 +23,6 @@ public abstract class Apartment {
     public int getNumber() {
         return number;
     }
+
+
 }

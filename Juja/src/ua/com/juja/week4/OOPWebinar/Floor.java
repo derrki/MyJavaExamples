@@ -3,6 +3,7 @@ package ua.com.juja.week4.OOPWebinar;
 import ua.com.juja.week4.OOPWebinar.apartment.Apartment;
 import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
 import ua.com.juja.week4.OOPWebinar.apartment.TechnicalApartment;
+import ua.com.juja.week4.OOPWebinar.staff.Cleaner;
 
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
@@ -11,6 +12,7 @@ public class Floor {
     private static final int DEFAULT_APARTMENT_KAPASITY = 4;
     private int number;
     private Apartment[] apartments;
+    private Cleaner cleaner;
 
     public Floor(int number, int floorsCount, NumberGenerator numbers) {
         this.number = number;
@@ -25,7 +27,12 @@ public class Floor {
     public Apartment getFreeApartment() {
         for (Apartment apartment: apartments) {
             if (apartment instanceof LivingApartment && apartment.isFree()){
-                return (LivingApartment)apartment;
+                LivingApartment livingApartment = (LivingApartment) apartment;
+                if (!livingApartment.isSettled() ){
+                    cleaner.clean(apartment);
+                }
+                cleaner.clean(apartment);
+                return livingApartment;
             }
         }
         return null;
@@ -41,5 +48,9 @@ public class Floor {
         }
         result += "=============================\n";
         return result;
+    }
+
+    public void setCleaner(Cleaner cleaner) {
+        this.cleaner = cleaner;
     }
 }

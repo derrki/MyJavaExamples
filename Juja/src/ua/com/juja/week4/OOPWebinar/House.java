@@ -19,10 +19,14 @@ public class House {
         floors = new Floor[floorsCount];
         for (int index = 0; index < floorsCount; index++) {
             floors[index] = new Floor(index + 1, apartmensOnFloor, numbers);
+
         }
     }
 
+
+
     public void settle(Owner owner){
+        System.out.println("Try to settle " + owner.toString() + "\n");
         for (Floor floor : floors){
            LivingApartment apartment = (LivingApartment) floor.getFreeApartment();
             if (apartment != null){
@@ -42,7 +46,9 @@ public class House {
     }
 
     public void addCleaner(Cleaner cleaner) {
-        this.cleaners[nextCleanerPlace()] = cleaner;
+        int floor = nextCleanerPlace();
+        this.cleaners[floor] = cleaner;
+        this.floors[floor].setCleaner(cleaner);
     }
 
     private int nextCleanerPlace() {
@@ -54,4 +60,6 @@ public class House {
         }
         throw  new RuntimeException("No place for new cleaner");
     }
+
+
 }

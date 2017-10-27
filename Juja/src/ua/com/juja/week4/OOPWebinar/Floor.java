@@ -3,6 +3,7 @@ package ua.com.juja.week4.OOPWebinar;
 import ua.com.juja.week4.OOPWebinar.apartment.Apartment;
 import ua.com.juja.week4.OOPWebinar.apartment.LivingApartment;
 import ua.com.juja.week4.OOPWebinar.apartment.TechnicalApartment;
+import ua.com.juja.week4.OOPWebinar.printer.SimpleTextPrinter;
 import ua.com.juja.week4.OOPWebinar.staff.Cleaner;
 
 /**
@@ -19,7 +20,7 @@ public class Floor {
         this.apartments = new Apartment[floorsCount];
         this.apartments[0] = new TechnicalApartment(numbers.getNumber());
         for (int index = 1; index < floorsCount ; index++) {
-            apartments[index] = new LivingApartment(numbers.getNumber(), DEFAULT_APARTMENT_KAPASITY);
+            apartments[index] = new LivingApartment(numbers.getNumber(), DEFAULT_APARTMENT_KAPASITY, new SimpleTextPrinter());
 
         }
     }

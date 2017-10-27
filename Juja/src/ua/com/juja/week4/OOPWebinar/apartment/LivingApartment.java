@@ -1,6 +1,7 @@
 package ua.com.juja.week4.OOPWebinar.apartment;
 
 import ua.com.juja.week4.OOPWebinar.Owner;
+import ua.com.juja.week4.OOPWebinar.printer.Printer;
 
 /**
  * 1. Make it work. 2. Make it right. 3. Make it fast
@@ -8,8 +9,9 @@ import ua.com.juja.week4.OOPWebinar.Owner;
 public class LivingApartment extends Apartment {
     private int number;
     private Owner[] owners;
+    private Printer printer;
 
-    public LivingApartment(int number, int capasity) {
+    public LivingApartment(int number, int capasity, Printer printer) {
         super(number);
         owners = new Owner[capasity];
     }
@@ -30,15 +32,7 @@ public class LivingApartment extends Apartment {
 
     @Override
     public String toString() {
-        String result = super.toString();
-        for (int index = 0; index < owners.length ; index++) {
-            if (owners[index] != null){
-                result += "*****************************\n";
-                result += "Owner :" + owners[index].toString() + "\n";
-                result += "*****************************\n";
-            }
-        }
-        return result;
+        return printer.print(this);
     }
 
     @Override
@@ -48,5 +42,17 @@ public class LivingApartment extends Apartment {
 
     public boolean isSettled() {
         return owners[0] != null;
+    }
+
+    public String [] getOwners() {
+        String[] result = new String[owners.length];
+        for (int index = 0; index < result.length; index++){
+            if (owners[index] != null) {
+                result[index] = owners[index].toString();
+            } else {
+                result [index] = "";
+            }
+        }
+        return result;
     }
 }

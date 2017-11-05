@@ -7,7 +7,7 @@ public class Test {
     public static void main(String[] args) {
         String testLinerName = "TestLinerName";
         float testLinerLength = 1000;
-        float testLinerWidth = 1000;
+       float testLinerWidth = 1000;
         float testLinerDisplacement = 1000;
         int testLinerPassengers = 100;
 

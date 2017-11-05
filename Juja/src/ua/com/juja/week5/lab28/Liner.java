@@ -13,6 +13,16 @@ public class Liner extends AbstractShip {
         this.passengers = passengers;
     }
 
+    public float calculatePayment(float renta) {
+        float resultRenta = 0;
+        if(renta < 0 || renta == 0){
+            resultRenta = calculatePayment();
+        } else {
+            resultRenta = passengers*renta;
+        }
+        return resultRenta;
+    }
+
     @Override
     public float calculatePayment() {
         return passengers*DEFAULT_RENTAL;

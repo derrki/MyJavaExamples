@@ -1,10 +1,10 @@
 package ua.com.juja.week5.lab31;
 
-public class Tanker extends AbstractShip {
+class Tanker extends AbstractShip {
     private float volume;
-    public static final float DEFAULT_RENTAL = 250;
+    static final float DEFAULT_RENTAL = 250;
 
-    public Tanker(String name, float length, float width, float displacement, float volume) {
+    Tanker(String name, float length, float width, float displacement, float volume) {
         super(name, length, width, displacement);
         this.volume = volume;
     }

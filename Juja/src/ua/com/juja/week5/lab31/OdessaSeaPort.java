@@ -1,6 +1,6 @@
 package ua.com.juja.week5.lab31;
 
-public class OdessaSeaPort implements SeaPortQueue {
+class OdessaSeaPort implements SeaPortQueue {
 
     private static final int NO_SHIP_IN_ARRAY = -1;
     private int indexShipInPort = NO_SHIP_IN_ARRAY;
@@ -9,15 +9,12 @@ public class OdessaSeaPort implements SeaPortQueue {
     @Override
     public int addShipToEndQueue(AbstractShip ship) {
 
-        int resultAddShipToEndQueue;
-        if (++indexShipInPort < LENGTH_QUEUE_SHIP) {
-            arrayShip[indexShipInPort] = ship;
-            resultAddShipToEndQueue = indexShipInPort;
-        } else {
-            resultAddShipToEndQueue = indexShipInPort;
+        if (indexShipInPort == LENGTH_QUEUE_SHIP - 1) {
+            return indexShipInPort = NO_SHIP_IN_ARRAY;
         }
 
-        return resultAddShipToEndQueue;
+        arrayShip[++indexShipInPort] = ship;
+        return indexShipInPort;
     }
 
     @Override
@@ -42,7 +39,7 @@ public class OdessaSeaPort implements SeaPortQueue {
             resultStringShip = "QueueEmpty";
         } else {
             for (int index = 0; index < arrayShip.length; index++) {
-                resultStringShip += arrayShip[index].toPrint();
+                resultStringShip += "{" + arrayShip[index].toPrint() + "};";
             }
         }
         return resultStringShip;

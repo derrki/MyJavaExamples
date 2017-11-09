@@ -16,10 +16,10 @@ abstract class AbstractShip {
     public abstract float calculatePayment();
 
     public String toPrint() {
-        return "{Name=" + name +
+        return "Name=" + name +
                 "Length=" + length +
                 "Width=" + width +
-                "Displacement=" + displacement + "};";
+                "Displacement=" + displacement;
     }
 
     public String getName() {

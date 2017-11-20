@@ -45,8 +45,9 @@ public class GuesGame {
                 player2IsRight = true;
             }
 
-            if (guessPlayer3 == targetNumber){
+            if (guessPlayer3 == targetNumber) {
                 player3IsRight = true;
+            }
 
                 if (player1IsRight || player2IsRight || player1IsRight){
                     System.out.println("Ура, є переможець");
@@ -58,7 +59,6 @@ public class GuesGame {
                 } else {
                     System.out.println("Гравці повинні спробувати ще раз.");
                 }
-            }
         }
     }
 }
